@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Política de Privacidad – Ajoruto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f7f3ee;
+      --ink: #1a1714;
+      --muted: #6b6460;
+      --accent: #c8622a;
+      --rule: #d9d0c7;
+    }
+
+    html { font-size: 18px; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    header {
+      border-top: 3px solid var(--ink);
+      padding-top: 36px;
+      margin-bottom: 60px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+
+    .accent-line {
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    section {
+      margin-bottom: 48px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.05s; }
+    section:nth-child(3) { animation-delay: 0.10s; }
+    section:nth-child(4) { animation-delay: 0.15s; }
+    section:nth-child(5) { animation-delay: 0.20s; }
+    section:nth-child(6) { animation-delay: 0.25s; }
+    section:nth-child(7) { animation-delay: 0.30s; }
+    section:nth-child(8) { animation-delay: 0.35s; }
+    section:nth-child(9) { animation-delay: 0.40s; }
+
+    hr.rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      position: relative;
+      padding-left: 16px;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    p {
+      color: #2e2a27;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 8px 0 12px 0;
+      padding: 0;
+    }
+
+    ul li {
+      color: #2e2a27;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .placeholder {
+      background: #fff3cd;
+      border: 1px dashed #e0a800;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-style: italic;
+      color: #856404;
+      font-size: 0.9rem;
+    }
+
+    .highlight-box {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      padding: 24px 28px;
+      margin: 32px 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .highlight-box p {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 32px;
+      margin-top: 64px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      animation: fadeUp 0.8s ease 0.5s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .wrapper { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <p class="eyebrow">Documento legal · Ajoruto</p>
+      <h1>Política de<br>Privacidad</h1>
+      <div class="accent-line"></div>
+      <p class="meta">Última actualización: <span id="fecha"></span></p>
+    </header>
+
+    <div class="highlight-box">
+      <p>Ajoruto no recopila ni envía datos personales o financieros a servidores externos. Toda la información que introduces se guarda solo en tu dispositivo.</p>
+    </div>
+
+    <section>
+      <hr class="rule"/>
+      <h2>1. Responsable</h2>
+      <p>Ajoruto ("la app") es una aplicación de finanzas personales. El responsable del tratamiento de los datos que describe esta política es <span class="placeholder">Manubu</span>. Puedes contactarnos en: <span class="placeholder">manubu.dev@gmail.com</span>.</p>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>2. Resumen</h2>
+      <p>Ajoruto no recopila ni envía datos personales o financieros a servidores externos. Toda la información que introduces (carteras, movimientos, presupuestos, metas de ahorro, categorías) se guarda solo en tu dispositivo.</p>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>3. Datos que trata la app</h2>
+      <ul>
+        <li><strong>Datos financieros que tú introduces:</strong> carteras, movimientos, presupuestos, metas de ahorro, categorías. Se almacenan únicamente en tu dispositivo (base de datos local con Hive). No se envían a internet.</li>
+        <li><strong>Preferencias de la app:</strong> tema (claro/oscuro), configuración de la aplicación. Se guardan en tu dispositivo.</li>
+        <li><strong>Datos de seguridad (bloqueo de app):</strong> si activas el bloqueo, la app guarda de forma local y segura (almacenamiento seguro del sistema) la información necesaria para el PIN y la preferencia de uso de biometría. Esta información nunca sale de tu dispositivo.</li>
+        <li><strong>Exportación e importación:</strong> los archivos de respaldo se crean y leen solo en tu dispositivo o en las apps que tú uses para compartir (por ejemplo, correo o almacenamiento). La app no sube esos archivos a ningún servidor.</li>
+      </ul>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>4. Permisos de la app</h2>
+      <ul>
+        <li><strong>Biometría (huella/Face ID):</strong> se usa solo para desbloquear la app cuando tú activas el bloqueo. No se almacenan datos biométricos; el sistema operativo solo indica si la autenticación fue correcta.</li>
+        <li><strong>Almacenamiento:</strong> en algunos dispositivos Android se puede solicitar permiso de almacenamiento para guardar o elegir archivos de exportación/importación. Los archivos se manejan solo en tu dispositivo o en las apps que tú elijas.</li>
+      </ul>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>5. Información del dispositivo</h2>
+      <p>La app puede usar información básica del dispositivo (por ejemplo, tipo de sistema operativo y versión) solo para el correcto funcionamiento (exportación, temas, compatibilidad). Esta información no se envía a servidores externos ni se usa para identificarte.</p>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>6. Terceros</h2>
+      <p>Ajoruto no incluye redes de publicidad, analytics de terceros ni servicios en la nube que recopilen tus datos personales o financieros. Las librerías utilizadas (por ejemplo, para almacenamiento local, fuentes o gráficos) no envían tus datos a internet.</p>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>7. Tus derechos</h2>
+      <p>Como no recopilamos datos en servidores, no mantenemos bases de datos de usuarios. Puedes:</p>
+      <ul>
+        <li><strong>Eliminar todos los datos:</strong> desinstalando la app y, si lo ofrecen las opciones del sistema, borrando los datos de la aplicación.</li>
+        <li><strong>Exportar tus datos:</strong> usando la función de exportación de la app y guardando el archivo donde quieras.</li>
+      </ul>
+      <p>Para cualquier pregunta sobre privacidad, escribe a <span class="placeholder">manubu.dev@gmail.com</span>.</p>
+    </section>
+
+    <section>
+      <hr class="rule"/>
+      <h2>8. Cambios</h2>
+      <p>Cualquier cambio relevante en esta política se reflejará en esta página; la "Última actualización" se modificará en consecuencia. Te recomendamos revisarla de vez en cuando.</p>
+    </section>
+
+    <footer>
+      <p>Este documento es efectivo a partir de la fecha indicada y aplica a todos los usuarios de Ajoruto.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    const d = new Date();
+    const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    document.getElementById('fecha').textContent = `${d.getDate()} de ${meses[d.getMonth()]} de ${d.getFullYear()}`;
+  </script>
+</body>
+</html>
